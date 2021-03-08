@@ -3,12 +3,15 @@
 <title>Struk</title>
 <style>
  @page {
-    margin: 0px;
+    margin: 1px;
     /* size: 226.772pt; */
+    /* size: 80mm 80mm ; */
+    font-size: 2 ;
   }
   body {
      margin: 10px;
-     max-width: 30%;
+     max-width: 25%;
+     font-size: 2 ;
   }
   h2{
     margin-top:10px;
@@ -56,22 +59,22 @@
             </tbody>
           </table>
     </div>
-    <table  border="0" style="margin-bottom:10px">
+    <table width="100%" border="0" style="margin-bottom:10px">
         <tbody>
           <tr>
-            <td width="65px">Kasir :</td>
-            <td align="left">{{ str2word(Auth::user()->name,1) }}</td>
-            <td align="right">No :</td>
-            <td align="right">{{ $transaction->transaction_number }}</td>
+            <td>Kasir: {{ str2word(Auth::user()->name,1) }}</td>
+            {{-- <td>{{ str2word(Auth::user()->name,1) }}</td> --}}
+            <td align="right">No :  {{ $transaction->transaction_number }}</td>
+            {{-- <td align="right">{{ $transaction->transaction_number }}</td> --}}
           </tr>
           <tr>
-            <td>Tanggal :</td>
-            <td colspan="3">{{ date('d-m-Y, H:i',strtotime($transaction->created_at)) }}</td>
+            <td>Tanggal:</td>
+            <td colspan="3" align="right">{{ date('d-m-Y,H:i',strtotime($transaction->created_at)) }}</td>
           </tr>
         </tbody>
       </table>
       <div style="border-top: 1px dashed #333; padding: 2px; padding-bottom: -4px; text-align: center; border-bottom: none;">&nbsp;</div>
-      <table  border="0">
+      <table width="100%" border="0">
         <tbody>
           <tr>
             <td>ITEM</td>
@@ -122,8 +125,11 @@
         </tbody>
       </table>
       <p style="text-align:center;font-size:12px;margin-top:25px">** Terima Kasih **</p>
-
 </div>
+<script>
+    window.focus();
+    window.print();
+  </script>
 </html>
 
 

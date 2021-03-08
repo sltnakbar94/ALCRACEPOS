@@ -171,19 +171,22 @@ class CashierTicketController extends Controller
                 $total = TransactionCart::where(['transaction_id' => $transaction->id])->sum('subtotal');
                 $beforeCashback = TransactionCart::where(['transaction_id' => $transaction->id])->sum(DB::raw('quantity * price'));
                 if ($transaction->ticket_type == 'pass') {
-                    $pdf = PDF::setPaper(['0','0','212.598','20082.6772'], 'portrait')->loadView('cashierticket::contents/cashier/pdf/ticket',compact([
-                        'transaction','total','beforeCashback'
-                    ]));
+                    // $pdf = PDF::setPaper(['0','0','212.598','20082.6772'], 'portrait')->loadView('cashierticket::contents/cashier/pdf/ticket',compact([
+                    //     'transaction','total','beforeCashback'
+                    // ]));
                     // $content = view('cashierticket::contents/cashier/pdf/ticket' , compact([
                     //     'transaction','total','beforeCashback'
                     // ]))->render();
                     // $html2pdf = new html2pdf('P' , $paper , 'en') ;
                     // $html2pdf->writeHTML($content);
 		            // $html2pdf->output();
-                }else{
-                    $pdf = PDF::setPaper(['0','0','212.598','282'], 'portrait')->loadView('cashierticket::contents/cashier/pdf/ticket',compact([
+                    return view('cashierticket::contents/cashier/pdf/ticket' ,  compact([
                         'transaction','total','beforeCashback'
                     ]));
+                }else{
+                    // $pdf = PDF::setPaper(['0','0','212.598','282'], 'portrait')->loadView('cashierticket::contents/cashier/pdf/ticket',compact([
+                    //     'transaction','total','beforeCashback'
+                    // ]));
                     // $content = view('cashierticket::contents/cashier/pdf/ticket' , compact([
                     //     'transaction','total','beforeCashback'
                     // ]))->render();
@@ -194,8 +197,9 @@ class CashierTicketController extends Controller
             }else{
                 echo 'Oops Not Found';
             }
-
-            return $pdf->stream();
+            return view('cashierticket::contents/cashier/pdf/ticket' , compact([
+                    'transaction','total','beforeCashback'
+                ]));
         }else{
             $transaction = Transaction::with(['item' => function($query){
                                 $query->with('cart')->get();

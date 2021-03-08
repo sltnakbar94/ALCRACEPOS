@@ -35,10 +35,7 @@
       <table width="100%" border="0" style="margin-bottom:10px">
         <tbody>
           <tr>
-            <td>CITY MALL SUKABUMI, Lt 4</td>
-          </tr>
-          <tr>
-            <td>SUKABUMI, JAWA BARAT</td>
+            <td>KUTABUMI, TANGGERANG</td>
           </tr>
         </tbody>
       </table>

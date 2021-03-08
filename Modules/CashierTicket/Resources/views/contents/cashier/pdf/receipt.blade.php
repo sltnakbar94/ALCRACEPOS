@@ -7,13 +7,14 @@
     margin-bottom: 2083px ; */
     /* size: 5cm 10cm;
     margin-top: 0; change the margins as you want them to be. */
-    size: 8cm 15cm;
+    /* size: 8cm 15cm; */
+    size: 80mm 80mm ;
     margin : 0mm ;
   }
   body {
     margin-top: 0mm ;
     margin-left: 0mm ;
-    max-width: 30%;
+    max-width: 33%;
    }
   h2{
     margin-top:10px;
@@ -62,14 +63,14 @@
       <table width="100%" border="0" style="margin-bottom:10px">
         <tbody>
           <tr>
-            <td width="65px">Kasir :</td>
-            <td align="left">{{ str2word(Auth::user()->name,1) }}</td>
+            <td>Kasir:{{ str2word(Auth::user()->name,1) }}</td>
+            {{-- <td align="left">{{ str2word(Auth::user()->name,1) }}</td> --}}
             <td align="right">No :</td>
             <td align="left">{{ $transaction->transaction_number }}</td>
           </tr>
           <tr>
-            <td>Tanggal :</td>
-            <td colspan="3">{{ date('d-m-Y, H:i',strtotime($transaction->created_at)) }}</td>
+            <td colspan="4">Tanggal</td>
+            <td>{{ date('d-m-Y, H:i',strtotime($transaction->created_at)) }}</td>
           </tr>
         </tbody>
       </table>
@@ -96,7 +97,7 @@
       </table>
       <br>
       <div style="border-top: 1px dashed #333; padding: 2px; padding-bottom: -4px; text-align: center; border-bottom: none;">&nbsp;</div>
-      <table width="100%" border="0">
+      <table width="100%" style="font-size:12px;" border="0">
         <tbody>
           <tr>
             <td align="right">Subtotal :</td>
@@ -119,7 +120,7 @@
             <td align="right">{{ number_format($transaction->cash) }}</td>
           </tr>
           <tr>
-            <td align="right">Kembali :</td>
+            <td align="right" style="font-size:12px;">Kembali :</td>
             <td align="right">{{ number_format($transaction->change) }}</td>
           </tr>
         </tbody>

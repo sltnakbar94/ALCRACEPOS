@@ -2,8 +2,8 @@
 <html>
 <title>Struk</title>
 <style>
-  @page { 
-    margin: 0px; 
+  @page {
+    margin: 0px;
     /* size: 226.772pt; */
   }
   body { margin: 10px; }
@@ -47,10 +47,7 @@
       <table width="100%" border="0" style="margin-bottom:10px">
         <tbody>
           <tr>
-            <td>CITY MALL SUKABUMI, Lt 4</td>
-          </tr>
-          <tr>
-            <td>SUKABUMI, JAWA BARAT</td>
+            <td>KUTABUMI, TANGGERANG</td>
           </tr>
         </tbody>
       </table>
@@ -77,7 +74,7 @@
             <td align="right">HARGA</td>
             <td align="right">TOTAL</td>
           </tr>
-          @foreach ($transaction->item as $item)    
+          @foreach ($transaction->item as $item)
             @if ($item->cart == true)
               <tr>
                 <td>{{ $item->name }}</td>

@@ -3,12 +3,11 @@
 <title>Ticket</title>
 <style>
   @page {
-    margin: 0px;
-    /* size: 226.772pt; */
+        margin: 0px;
   }
   body {
        margin: 10px;
-
+       max-width: 30%;
        }
   h2{
     margin-top:10px;
@@ -35,7 +34,7 @@
     {{-- <div id="watermark"><img src="{{ asset("storage/background/bg.jpeg") }}" height="100%"></div> --}}
     <div class="event">
       <code>
-        <table border="0" style="margin-bottom:-5px">
+        <table width="100%" border="0" style="margin-bottom:-5px">
           <tbody>
             <tr>
               <td>
@@ -53,25 +52,25 @@
     </div>
     <div class="cart">
       <code>
-        <table border="0" style="margin-bottom:10px">
+        <table width="100%" border="0" style="margin-bottom:10px">
           <tbody>
             <tr>
               <td>Kutabumi , Tanggerang</td>
             </tr>
           </tbody>
         </table>
-        <table border="0" style="margin-bottom:10px">
+        <table width="100%" border="0" style="margin-bottom:10px">
           <tbody>
             <tr>
               <td colspan="2" style="text-align:center;padding-bottom:5px;font-weight:bold;">Tiket Wahana</td>
             </tr>
             <tr>
-              <td width="95px">Tanggal </td>
-              <td>: {{ date('d-m-Y, H:i',strtotime($transaction->created_at)) }}</td>
+              <td>Tanggal      :{{ date('d-m-Y, H:i',strtotime($transaction->created_at)) }} </td>
+              {{-- <td>: {{ date('d-m-Y, H:i',strtotime($transaction->created_at)) }}</td> --}}
             </tr>
             <tr>
-              <td>Transaksi No </td>
-              <td>: {{ $transaction->transaction_number }}</td>
+              <td>Transaksi No : {{ $transaction->transaction_number }} </td>
+              {{-- <td>: {{ $transaction->transaction_number }}</td> --}}
             </tr>
           </tbody>
         </table>
