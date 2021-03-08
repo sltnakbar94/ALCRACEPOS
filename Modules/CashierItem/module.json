@@ -1,0 +1,16 @@
+{
+    "name": "CashierItem",
+    "alias": "cashieritem",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\CashierItem\\Providers\\CashierItemServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        "Helpers/Str2Word.php"
+    ],
+    "requires": []
+}

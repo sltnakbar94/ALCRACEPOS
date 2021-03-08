@@ -1,0 +1,25 @@
+{
+    "name": "nwidart/counterrace",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\CounterRace\\Providers\\CounterRaceServiceProvider"
+            ],
+            "aliases": {
+                
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\CounterRace\\": ""
+        }
+    }
+}

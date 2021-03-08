@@ -1,0 +1,2 @@
+<a href="{{ route('transTicketDetail',['number' => $transaction->transaction_number]) }}" class="btn btn-sm btn-secondary">Rincian <i class="fa fa-angle-double-right"></i></a>
+<a href="{{ route('transTicketView',['number' => $transaction->transaction_number]) }}" class="btn btn-sm btn-secondary"><i class="fa fa-print"></i> Struk Transaksi</a>

@@ -1,0 +1,1 @@
+<a href="{{ route('receivingForm',['id' => $item->id]) }}" class="btn btn-sm btn-secondary">Tambah Stok <i class="fa fa-angle-double-right"></i></a>
