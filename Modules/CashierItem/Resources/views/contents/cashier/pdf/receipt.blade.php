@@ -35,7 +35,7 @@
           </tr>
           <tr>
             <td>
-              <h3 style="font-size:13px;font-weight:500;margin-top:-15px">WAHANA BERMAIN ANAK</h3>
+              <h3 style="font-size:13px;font-weight:500;margin-top:-15px">WAHANA BELAJAR DAN BERMAIN ANAK</h3>
             </td>
           </tr>
         </tbody>
@@ -77,8 +77,8 @@
           @foreach ($transaction->item as $item)
             @if ($item->cart == true)
               <tr>
-                <td>{{ $item->name }}</td>
-                <td align="right">{{ $item->cart->quantity }}</td>
+                <td style="font-size:xx-small">{{ $item->name }}</td>
+                <td align="right" style="font-size:xx-small">{{ $item->cart->quantity }}</td>
                 <td align="right">{{ number_format($item->cart->price) }}</td>
                 <td align="right">{{ number_format($item->cart->subtotal) }}</td>
               </tr>

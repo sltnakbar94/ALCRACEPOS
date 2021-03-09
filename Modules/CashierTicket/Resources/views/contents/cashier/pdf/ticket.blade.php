@@ -43,7 +43,7 @@
             </tr>
             <tr>
               <td>
-                <h3 style="font-size:13px;font-weight:500;margin-top:-15px">WAHANA BERMAIN ANAK</h3>
+                <h3 style="font-size:13px;font-weight:500;margin-top:-15px">WAHANA BELAJAR DAN BERMAIN ANAK</h3>
               </td>
             </tr>
           </tbody>

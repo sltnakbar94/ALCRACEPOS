@@ -10,7 +10,7 @@
   }
   body {
      margin: 10px;
-     max-width: 25%;
+     max-width: 30%;
      font-size: 2 ;
   }
   h2{
@@ -64,7 +64,7 @@
           <tr>
             <td>Kasir: {{ str2word(Auth::user()->name,1) }}</td>
             {{-- <td>{{ str2word(Auth::user()->name,1) }}</td> --}}
-            <td align="right">No :  {{ $transaction->transaction_number }}</td>
+            <td align="right">No :{{ $transaction->transaction_number }}</td>
             {{-- <td align="right">{{ $transaction->transaction_number }}</td> --}}
           </tr>
           <tr>
@@ -78,24 +78,24 @@
         <tbody>
           <tr>
             <td>ITEM</td>
-            <td align="right">QTY</td>
-            <td align="right">HARGA</td>
-            <td align="right">TOTAL</td>
+            <td align="right" ><p style="font-size:9px">QTY</p></td>
+            <td align="right" style="font-size:12px">HARGA</td>
+            <td align="right" style="font-size:12px">TOTAL</td>
           </tr>
           @foreach ($transaction->item as $item)
             @if ($item->cart == true)
-            <tr>
+            <tr style="font-size:x-small">
               <td>{{ $item->name }}</td>
-              <td align="right">{{ $item->cart->quantity }}</td>
-              <td align="right">{{ number_format($item->cart->price) }}</td>
-              <td align="right">{{ number_format($item->cart->subtotal) }}</td>
+              <td align="right" style="font-size:x-small">{{ $item->cart->quantity }}</td>
+              <td align="right" style="font-size:x-small">{{ number_format($item->cart->price) }}</td>
+              <td align="right" style="font-size:x-small">{{ number_format($item->cart->subtotal) }}</td>
             </tr>
             @endif
           @endforeach
         </tbody>
       </table>
       <br>
-      <div style="border-top: 1px dashed #333; padding: 2px; padding-bottom: -4px; text-align: center; border-bottom: none;">&nbsp;</div>
+      <div style="border-top: 1px dashed #333; padding: 2px; padding-bottom: -4px; text-align: center; border-bottom: none;width: 100%">&nbsp;</div>
       <table  border="0">
         <tbody>
           <tr>
